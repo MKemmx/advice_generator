@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Manrope:wght@200;300;500;600;700&family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(218, 23%, 16%);
+  color: hsl(193, 38%, 86%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 500px;
+  background-color: hsl(217, 19%, 24%);
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.card-header {
+  color: hsl(150, 100%, 66%);
+  text-align: center;
+  margin: 15px 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+.card-body p {
+  font-size: 28px;
+  text-align: center;
+}
+
+.card-footer {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 130px;
+  padding: 12px 17px;
+  cursor: pointer;
+  outline: none;
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+/* Loader */
+.loader {
+  border: 13px solid #f3f3f3; /* Light grey */
+  border-top: 13px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin-inline: auto;
+  margin-top: 20px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    max-width: 95%;
+    margin-inline: auto;
+  }
+}
